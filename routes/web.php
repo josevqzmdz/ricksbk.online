@@ -12,7 +12,7 @@ Route::get('/sobre-mi', function () {
     return view('sobre-mi');
 });
 */
-Route::get('/', [Controller::class, 'index'])->name('index');
-Route::get('/index', [Controller::class, 'index'])->name('index');
-Route::get('/sobre-mi', [Controller::class, 'index'])->name('index');
+Route::get('/', [Controller::class, 'index']);
+#Route::get('/index', [Controller::class, 'index'])->name('index');
+Route::get('/sobre-mi', [Controller::class, 'sobre-mi']);
 
