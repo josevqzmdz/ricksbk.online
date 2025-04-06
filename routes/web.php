@@ -1,18 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\MainController;
 
-/*
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', [MainController::class, 'index']);
 
-Route::get('/sobre-mi', function () {
-    return view('sobre-mi');
-});
-*/
-Route::get('/', [Controller::class, 'index']);
-#Route::get('/index', [Controller::class, 'index'])->name('index');
-Route::get('/sobre-mi', [Controller::class, 'sobre-mi']);
+Route::get('/sobre-mi', [MainController::class, 'sobre-mi']);
 
