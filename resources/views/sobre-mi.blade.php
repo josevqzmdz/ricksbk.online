@@ -14,6 +14,12 @@
 <body>
     @include('index')
     @include('sobre-mi')
+    @vite([
+    'resources/css/app.css', 
+    'resources/js/app.js', 
+    'resources/css/reset.css', 
+    'resources/css/scroll.css' 
+    ])
   <!-- Layout  -->
    <div class="layout">
     <!-- barra lateral (info usuario) -->
@@ -39,7 +45,7 @@
                     </li>
 
                     <li class="menu__option">
-                        <a href="{{ route('sobre-mi')}}" class="menu__icon menu__link ">
+                        <a href="{{ route('sobre_mi')}}" class="menu__icon menu__link ">
                          <i class="fa-solid fa-user"></i>
                          <span class="menu__overlay">Sobre mi</span>
                         </a>
