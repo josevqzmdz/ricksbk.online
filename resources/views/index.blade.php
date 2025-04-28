@@ -11,14 +11,8 @@
     <title>PortFolio</title>
 </head>
 <body>
-  @include('index')
-  @include('sobre-mi')
-  @vite([
-    'resources/css/app.css', 
-    'resources/js/app.js', 
-    'resources/css/reset.css', 
-    'resources/css/scroll.css' 
-    ])
+  
+
   <!-- Layout  -->
    <div class="layout">
     <!-- barra lateral (info usuario) -->

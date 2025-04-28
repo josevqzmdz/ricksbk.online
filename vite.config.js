@@ -8,8 +8,7 @@ export default defineConfig({
             input: [
                 'resources/css/app.css', 
                 'resources/js/app.js', 
-                'resources/css/reset.css', 
-                'resources/css/scroll.css' 
+             
             ],
             refresh: true,
         }),
