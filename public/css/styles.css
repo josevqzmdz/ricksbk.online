@@ -5,6 +5,7 @@
 }
 
 body {
+
     font-family: "Poppins", sans-serif;
     font-style: normal;
 
@@ -13,7 +14,7 @@ body {
 :root{
     --color-principal: #ffffff;
     --color-secundario: #0f172a;
-    --color-cecundario2:#de0633;
+    --color-secundario2:#de0633;
 
     --color-background: #f2f7fc;
     --color-transparente: transparent;
@@ -23,6 +24,9 @@ body {
     --color-subtitulo: #888;
     --color-text:#555;
 
+    --color-border-reviews:#e5e6e7;
+    --color-company:#a5a6a7;
+
 
     
 }
@@ -30,14 +34,15 @@ body {
 html{
     font-size: 10px;
 }
+a{
+    text-decoration: none;
+}
 body{
     background-color: black;
     background-image: url(../img/fondo.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: -20px -120px;
-  
-
     width: 100%;
     height: 100%;
     font-family: "Poppins",Helvetica, sans-serif;
@@ -129,9 +134,7 @@ color: var(--color-principal);
 margin-top: 2.6rem;
 }
 
-.user-info__links{
 
-}
 .links__social{
     text-align: center;
     margin-top: 2rem;
@@ -254,8 +257,9 @@ align-items: center;
  
 }
 
-.menu__option:hover .menu__icon{
-color: var(--color-secundario);
+
+.menu__option:hover .menu__icon , .menu__link--active.menu__icon{
+color: var(--color-secundario2);
 
 }
 
@@ -298,13 +302,329 @@ border-radius: 2rem;
     overflow: auto;
     display: block;
 }
-/* scroll bar --------------------------------------------------------------------*/
+.about__header{
+    display: inline-block;
+    margin-bottom: 4.5rem;
 
+}
+.about__title{
+position: relative;
+    font-size: 3.2rem;
+}
+.about__title::after{
+content: "";
+position: absolute;
+top: 20px;
+right: -20px;
+width: 50px;
+height: 30px;
+background-image:-webkit-repeating-radial-gradient(center center, var(--color-secundario2), var(--color-secundario2) 1px, transparent 0px, transparent 100%);
+background-size: 6px 6px;
+opacity: 0.5;
+}
+.title__color{
+    color: var(--color-secundario2);
+}
+/* infoermacion personal -----------------------*/
+.about__personal-info{
+    width: 100%;
+    flex-direction: row;
+    display: flex;
+    margin-bottom: 5rem;
+}
+.personal-info__bio
+{
+    flex-basis: 56%;
+}
+.personal-info__description{
+    font-size: 1.5rem;
+    line-height: 2.4rem;
+}
 
+.personal-info__data{
+    padding: 0 1.8rem;
+    flex-basis: 44%;
+}
+.personal-info__option{
+    margin-bottom: 1rem;
 
+}
+.personal-info__title{
+    margin-right: 0.5rem;
+    margin-right: 0.5rem;
+    color: var(--color-secundario2);
+    font-weight: 600;
 
+}
+/* maqutacion de los servicios ---------------------------------------------*/
+.about__services,
+.about__reviews,
+.about__clients,
+.about__prices,
+.about__extra{
 
+    width: 100%;
+    margin-bottom: 3rem;
+}
+.services__header,
+.reviews__hader,
+.clients__header,
+.prices__header,
+.extra__header{
+    margin-bottom: 2.5rem;
+    display: inline-block;
+    padding-right: 1.2rem;
+    position: relative;
+}
+.services__title,
+.reviews__title,
+.clients__header,
+.prices__title,
+.extra__title{
 
+    font-size: 2.1rem;
+}
+.services__title::after,
+.reviews__title::after,
+.clients__title::after,
+.prices__title::after,
+.extra__title::after{
+    content: "";
+    position: absolute;
+    top: 15px;
+    right: 0px;
+    width: 30px;
+    height: 20px;
+    background-image:-webkit-repeating-radial-gradient(center center, var(--color-secundario2), var(--color-secundario2) 1px, transparent 0px, transparent 100%);
+    background-size: 6px 6px;
+    opacity: 0.5;
+    }
 
+    .services_container{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+       
+        flex-wrap: wrap;
+        
+    }
+    .services__service{
+        flex-basis: 45%;
+        margin: 1.5rem 1.5rem;
+    }
+   
+.services__real-icon{
+    color: var(--color-secundario2);
+    font-size: 3.8rem;
+}
+.services__title{
+    font-size: 1.8rem;
+    margin: 0.5rem 0;
+}
+.service__description{
+    font-size: 1.4rem;
+    text-align: justify;
+}
+/* REVIEWS -------------------------------------------------------- */
+.reviews__container{
+ width: 100%;
+ display: flex; 
+ flex-direction: row;
+ flex-wrap: wrap;
+}
+.reviews__review{
+    flex-basis: 44%;
+border: 2px solid var(--color-border-reviews);
+border-radius: 2rem;
+padding: 0 3rem 1.5rem 3rem ;
+margin: 4.5rem 2.5rem 1rem 2rem;
+}
+.review__image-container{
+    width: 100%;
+}
+.review__image{
+    max-width: 9rem;
+    max-height: 9rem;
+    border-radius: 9rem;
+    margin: 0 auto;
+    margin-top: -4.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25);
+}
 
+.review__description{
+    margin-bottom: 1rem;
+}
 
+.review__text{
+    font-size: 1.5rem;
+    line-height: 2.4rem;
+
+}
+
+.review_author{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.review__name{
+    flex-basis: 50%;
+    margin-bottom:0.5rem ;
+    font-size: 1.5rem;
+}
+.review__company{
+    color: var(--color-company);
+    font-weight: 300;
+    font-size: 1.3rem;
+}
+.review__icon{
+    color: var(--color-secundario2);
+    font-size: 4rem;
+    opacity: 0.5;
+}
+
+/* Clientes----------------------------------------------------------------------- */
+
+.about__clients{
+    width: 100%;
+    margin-bottom: 2rem;
+
+}
+.clients__header{
+margin-bottom: 2rem;
+
+}.clients__container{
+    display: flex;
+    flex-direction: row;
+justify-content: space-evenly;
+}
+.clients__image{
+    width: 145px;
+    padding: 1.5rem;
+}
+.clients__link{
+    display: block;
+    width: 100%;
+    opacity: 0.6;
+    transition: all 0.3s linear;
+}
+.clients__link:hover{
+   opacity: 1;
+}
+
+/* precios----------------------------------------------------------------------------------- */
+.prices__container{
+    margin-bottom: 5rem;
+    display: flex;
+    flex-direction: row;
+}
+.prices__box{
+    flex-basis: 50%;
+    height:100% ;
+ margin-right: 3rem;
+ padding: 3rem;
+ border: 2px solid var(--color-border-reviews);
+ border-radius: 1.5rem;
+ text-align: center;
+ transition: all 0.3s ease-in-out;
+}
+.prices__box:hover{
+    box-shadow: 0 18px 24px -5px rgba(0, 0, 0, 0.15);
+    transform: translateY(-1rem);
+}
+.prices__subtitle{
+    margin-bottom: 3rem;
+}
+
+.prices__box:hover .prices__text::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -0.3rem; /* Ajusta según necesites */
+    height: 0.5rem; /* Ajusta según necesites */
+    background-color: var(--color-secundario2);
+    transition: all 0.9s ease-in-out;
+}
+.prices__text {
+    position: relative;
+    display: inline-block;
+}
+
+.prices__price{
+    padding-bottom: 1rem;
+}
+.prices__number{
+    font-size: 4.2rem;
+    line-height: 1;
+    color: var(--color-titles);
+    display: block;
+    color: var(--color-secundario2);
+}
+.prices__advice{
+    color: var(--color-subtitulo);
+    display: block;
+}
+
+.prices__buy{
+    padding-top: 2.5;
+    padding-bottom: 2.5rem;
+}
+.prices__btn{
+    color: var(--color-secundario);
+    display: inline-block;
+    padding: 1.2rem 3.1rem;
+    border: 2px solid var(--color-border-reviews);
+    box-shadow: 0 10px 10px -8px var(--color-border-reviews);
+    border-radius: 3rem;
+    transition: all 0.3s linear;
+}
+.prices__btn:hover{
+    border: 2px solid var(--color-secundario2);
+    background-color: var(--color-secundario2);
+    color: var(--color-principal); 
+}
+.prices__reward{
+    font-size: 1.4rem;
+    padding: 0.5rem 0;
+}
+/*  */
+
+/* informacion extra------------------------------------------------------------------- */
+.extra__container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+}
+.extra__info{
+    flex-basis: 30%;
+    border: 2px solid var(--color-border-reviews);
+    text-align: center;
+    border-radius: 1rem;
+    padding: 2.5rem 1rem;
+    transition: all 0.3s ease-in-out;
+}
+.extra__info:hover{
+    box-shadow: 0 18px 24px -5px rgba(0, 0, 0, 0.15);
+    transform: translateY(-0.5rem);
+}
+.extra__icon{
+    font-size: 3.3rem;
+    color: var(--color-secundario2);
+    margin-bottom: 1rem;
+}
+.extra__subtitle{
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+.extra__quantity{
+    margin: 1.5rem 0;
+    display: block;
+    font-size: 3.6rem;
+    line-height: 5rem;
+    color: var(--color-subtitulo);
+}

@@ -6,6 +6,7 @@
    <link rel="stylesheet" href="{{ asset('assets/fonts/fontawesome-free-6.1.2-web/css/all.css')}}">
    <link rel="stylesheet" href="{{ asset('assets/fonts/poppins/poppins.css')}}">
    <link rel="stylesheet" href="{{ asset('css/reset.css')}}">
+   <link rel="stylesheet" href="{{ asset('css/scroll.css')}}">
    <link rel="stylesheet" href="{{ asset('css/styles.css')}}">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PortFolio</title>
@@ -30,14 +31,14 @@
                 <ul class="menu__list">
 
                     <li class="menu__option">
-                       <a href="{{ route('index')}}" class="menu__icon menu__link menu__link--active">
+                       <a href="{{ route('index')}}" class="menu__icon menu__link ">
                         <i class="fa-solid fa-house"></i>
                         <span class="menu__overlay">Home</span>
                        </a>
                     </li>
 
                     <li class="menu__option">
-                        <a href="{{ route('sobre-mi')}}" class="menu__icon menu__link ">
+                        <a href="{{ route('sobre-mi')}}" class="menu__icon menu__link menu__link--active">
                          <i class="fa-solid fa-user"></i>
                          <span class="menu__overlay">Sobre mi</span>
                         </a>
@@ -74,8 +75,8 @@
                 </ul>
             </nav>
              <!--links a redes sociales-->
-            <div class="user-info__links"></div>
-            <ul class="links__social">
+            <div class="user-info__links">  
+                <ul class="links__social">
                 
                 <li class="social__option">
                     <a href="#" class="social__link">
@@ -94,7 +95,8 @@
                         <i class="social__icon fa-brands fa-instagram"></i>
                     </a>   
                 </li>
-            </ul>
+            </ul></div>
+          
              <!--boton -->
             <div class="user-info__button">
                 <a href="" class="user-info__btn">Descargar CV</a>
@@ -110,9 +112,20 @@
 
      <!-- contenido principal  -->
       <main class="layout__content">
-        <section class="content__page">
-            <h1 class="page__name">Ricardo Ayala</h1>
-            <h2 class="page__job">Desarrollador Web</h2>
+        <section class="content__page content__about">
+            <!-- este contenido cambia para cada pagina del sitio web -->
+            <header class="about__header">
+                <h1 class="about__title">Sobre <span class="title__color">Mi</span></h1>
+            </header>
+
+
+
+
+
+
+
+
+
         </section>
       </main>
 

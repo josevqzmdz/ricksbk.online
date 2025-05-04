@@ -3,16 +3,15 @@
 <head>
     <meta charset="UTF-8">
    
-   <link rel="stylesheet" href="{{ asset('assets/fonts/fontawesome-free-6.1.2-web/css/all.css')}}">
+   <link rel="stylesheet" href=" {{ asset('assets/fonts/fontawesome-free-6.1.2-web/css/all.css')}}">
    <link rel="stylesheet" href="{{ asset('assets/fonts/poppins/poppins.css')}}">
-   <link rel="stylesheet" href="{{ asset('css/reset.css') }}">
-   <link rel="stylesheet" href="{{ asset('css/scroll.css') }}">
-   <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+   <link rel="stylesheet" href="{{ asset('css/reset.css')}}">
+   <link rel="stylesheet" href="{{ asset('css/scroll.css')}}">
+   <link rel="stylesheet" href="{{ asset('css/styles.css')}}">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PortFolio</title>
 </head>
 <body>
-    
 
   <!-- Layout  -->
    <div class="layout">
@@ -39,15 +38,14 @@
                     </li>
 
                     <li class="menu__option">
-                        <a href="{{ route('sobre_mi')}}" class="menu__icon menu__link ">
+                        <a href="{{ route('sobre-mi')}}" class="menu__icon menu__link menu__link--active">
                          <i class="fa-solid fa-user"></i>
                          <span class="menu__overlay">Sobre mi</span>
                         </a>
                      </li>
-                    
-                     <!-- TODO: agregar direcciones cuando hector los termine -->
+
                      <li class="menu__option">
-                        <a href="#" class="menu__icon menu__link ">
+                        <a href="{{route('Estudios')}}" class="menu__icon menu__link ">
                          <i class="fa-solid fa-graduation-cap"></i>
                          <span class="menu__overlay">Estudios</span>
                         </a>
@@ -77,8 +75,8 @@
                 </ul>
             </nav>
              <!--links a redes sociales-->
-            <div class="user-info__links"></div>
-            <ul class="links__social">
+            <div class="user-info__links">  
+                <ul class="links__social">
                 
                 <li class="social__option">
                     <a href="#" class="social__link">
@@ -97,7 +95,8 @@
                         <i class="social__icon fa-brands fa-instagram"></i>
                     </a>   
                 </li>
-            </ul>
+            </ul></div>
+          
              <!--boton -->
             <div class="user-info__button">
                 <a href="" class="user-info__btn">Descargar CV</a>
@@ -119,17 +118,13 @@
                 <h1 class="about__title">Sobre <span class="title__color">Mi</span></h1>
             </header>
 
-
-
-
+<!-- -------------------------------------------------------------------------------------- -->
 
             <section class="about__personal-info">
                 <article class="personal-info__bio">
                     <p class="personal-info__description">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                         Accusamus cumque temporibus quaerat ipsa nam aliquid, 
-                         deserunt beatae. Facere aliquam blanditiis totam voluptates
-                          omnis placeat odio deleniti, sit praesentium quo quisquam!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor a, eaque animi dolorum laboriosam ratione quidem veniam sequi itaque et accusantium voluptatem ex non voluptatibus! Quis recusandae excepturi facilis adipisci.
+                    Aspernatur ut optio distinctio cum laudantium enim ea quaerat at obcaecati et alias sit ullam labore facere ad magnam rerum, eaque, magni temporibus odio.
                     </p>
                 </article>
                 <div class="personal-info__data">
@@ -173,7 +168,7 @@
                 <div class="services_container">
                     <article class="services__service">
                         <div class="service__icon">
-                            <i class="fa-solid fa-code"></i>
+                            <i class="services__real-icon fa-solid fa-code"></i>
                         </div>
                         <div class="service__content">
                             <h3 class="service__title">Programacion</h3>
@@ -187,7 +182,7 @@
 
                     <article class="services__service">
                         <div class="service__icon">
-                            <i class="fa-solid fa-chalkboard-user"></i>
+                            <i class="services__real-icon fa-solid fa-chalkboard-user"></i>
                         </div>
                         <div class="service__content">
                             <h3 class="service__title">Formacion</h3>
@@ -201,7 +196,7 @@
 
                     <article class="services__service">
                         <div class="service__icon">
-                            <i class="fa-solid fa-computer"></i>
+                            <i class="services__real-icon fa-solid fa-computer"></i>
                         </div>
                         <div class="service__content">
                             <h3 class="service__title">Desarrollo Web</h3>
@@ -215,7 +210,7 @@
 
                     <article class="services__service">
                         <div class="service__icon">
-                            <i class="fa-solid fa-terminal"></i>
+                            <i class="services__real-icon fa-solid fa-terminal"></i>
                         </div>
                         <div class="service__content">
                             <h3 class="service__title">Administracion de Sistemas</h3>
@@ -259,7 +254,7 @@
                             </div>
 
                             <div class="review__author-icon">
-                                <icon class="review__icon fa-solid fa.quote-right"></icon>
+                                <i class="review__icon fa-solid fa-quote-right"></i>
                             </div>
                         </div>
 
@@ -268,7 +263,7 @@
 
                     <article class="reviews__review">
                         <div class="review__imgage-container">
-                            <img src="{{  asset('assets/img/testimonio2.jpg')}}" alt="Cara de un cliente" class="review__image">
+                            <img src="{{ asset('assets/img/testimonio2.jpg')}}" alt="Cara de un cliente" class="review__image">
                         </div>
 
                         <div class="review__description">
@@ -287,7 +282,7 @@
                             </div>
 
                             <div class="review__author-icon">
-                                <icon class="review__icon fa-solid fa.quote-right"></icon>
+                                <i class="review__icon fa-solid fa-quote-right"></i>
                             </div>
                         </div>
 
